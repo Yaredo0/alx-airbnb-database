@@ -46,3 +46,26 @@ Run the queries in your SQL environment connected to the Airbnb database schema.
 - `bookings`
 - `properties`
 - `reviews`
+
+# SQL Aggregation and Window Functions — ALX Airbnb Database
+
+This script demonstrates the use of SQL aggregation and window functions to analyze booking data.
+
+## 📁 Files
+
+- `aggregations_and_window_functions.sql`: Contains two SQL queries using COUNT, GROUP BY, and RANK.
+- `README.md`: Describes the purpose and usage of the queries.
+
+## 🧠 Query Summary
+
+1. **Aggregation with COUNT and GROUP BY**  
+   Retrieves the total number of bookings made by each user.
+
+2. **Window Function with RANK**  
+   Ranks properties based on how many bookings they’ve received.
+
+## ▶️ Usage
+
+Run the queries in your SQL environment connected to the Airbnb database schema. Make sure the following tables exist:
+- `bookings`
+
