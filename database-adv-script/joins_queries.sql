@@ -8,7 +8,7 @@ SELECT
 FROM bookings
 INNER JOIN users ON bookings.user_id = users.id;
 
--- 2️⃣ LEFT JOIN: Properties with their reviews (including properties with no reviews)
+-- LEFT JOIN: Properties with their reviews, including properties with no reviews
 SELECT 
   properties.id AS property_id,
   properties.name AS property_name,
@@ -16,7 +16,8 @@ SELECT
   reviews.rating,
   reviews.comment
 FROM properties
-LEFT JOIN reviews ON properties.id = reviews.property_id;
+LEFT JOIN reviews ON properties.id = reviews.property_id
+ORDER BY properties.id;
 
 -- 3️⃣ FULL OUTER JOIN: All users and all bookings, even if unmatched
 SELECT 
