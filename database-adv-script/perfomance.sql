@@ -1,4 +1,4 @@
--- 1️⃣ Initial query: Retrieve bookings with user, property, and payment details
+-- 1️⃣ Initial query: Retrieve bookings with user, property, and payment details, filtered by date and payment status
 SELECT 
   b.id AS booking_id,
   b.date,
@@ -12,7 +12,9 @@ SELECT
 FROM bookings b
 JOIN users u ON b.user_id = u.id
 JOIN properties p ON b.property_id = p.id
-JOIN payments pay ON b.id = pay.booking_id;
+JOIN payments pay ON b.id = pay.booking_id
+WHERE b.date >= '2025-01-01'
+  AND pay.status = 'completed';
 
 -- 2️⃣ Analyze performance
 EXPLAIN ANALYZE
